@@ -4,6 +4,11 @@ document.getElementById("Deposit-btn").addEventListener("click", function () {
     const depositAmount = parseFloat(depositAmountString);
     depositFuld.value = "";
 
+    if (isNaN(depositAmount)) {
+        alert("plise enter a valid number  ")
+        return;
+    }
+
     const preveusDeposit = document.getElementById("preveus-deposit");
     const preveusDepositString = preveusDeposit.innerText;
     const preveusDepositAmount = parseFloat(preveusDepositString);
